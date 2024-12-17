@@ -4,7 +4,7 @@ using namespace std;
 class Deque
 {
 private:
-    int arr[100];
+    int *arr;
     int front, rear, size;
 
 public:
@@ -14,6 +14,7 @@ public:
         this->size = size;
         front = -1;
         rear = 0;
+        arr = new int[size];
     }
 
     // Check if the deque is full
@@ -192,7 +193,6 @@ int main()
         cout << "3. Delete from Front" << endl;
         cout << "4. Delete from Rear" << endl;
         cout << "5. Display Deque" << endl;
-        cout << "6. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
